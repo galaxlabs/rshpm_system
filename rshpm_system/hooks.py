@@ -1,5 +1,5 @@
 app_name = "rshpm_system"
-app_title = "Rshpm System"
+app_title = "RSHPM System"
 app_publisher = "Galaxy Labs"
 app_description = "Real Estate Housing Property Management System"
 app_email = "galaxylab2020@gmail.com"

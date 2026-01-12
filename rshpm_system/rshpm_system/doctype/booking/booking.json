@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-12 19:41:04.717442",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "booking_date",
+  "total_cost",
+  "column_break_hsgk",
+  "customer",
+  "property",
+  "payment_plan_section",
+  "down_payment_percentage",
+  "installment_interval",
+  "column_break_pkch",
+  "total_installments",
+  "section_break_oiva",
+  "installment_schedule"
+ ],
+ "fields": [
+  {
+   "default": "Now",
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Booking Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hsgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fetch_from": "property.total_cost",
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "payment_plan_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Plan"
+  },
+  {
+   "fieldname": "down_payment_percentage",
+   "fieldtype": "Percent",
+   "label": "Down Payment Percentage"
+  },
+  {
+   "fieldname": "column_break_pkch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_installments",
+   "fieldtype": "Int",
+   "label": "Total Installments"
+  },
+  {
+   "fieldname": "installment_interval",
+   "fieldtype": "Select",
+   "label": "Installment Interval",
+   "options": "Monthly\nQuarterly"
+  },
+  {
+   "fieldname": "section_break_oiva",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "installment_schedule",
+   "fieldtype": "Table",
+   "label": "Installment Schedule",
+   "options": "Installment Schedule Table"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-12 20:05:56.229285",
+ "modified_by": "Administrator",
+ "module": "Rshpm System",
+ "name": "Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
