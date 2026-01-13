@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-13 16:06:22.631090",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "property",
+  "transfer_type",
+  "transfer_date",
+  "remarks",
+  "column_break_ahyj",
+  "from_client",
+  "to_client",
+  "transfer_fee",
+  "check_list_section",
+  "original_documents_returned",
+  "document_return_log",
+  "transfer_form_scan",
+  "buyer_id_copy",
+  "seller_id_copy"
+ ],
+ "fields": [
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "column_break_ahyj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_client",
+   "fieldtype": "Link",
+   "label": "From Client",
+   "options": "Client"
+  },
+  {
+   "fieldname": "to_client",
+   "fieldtype": "Link",
+   "label": "To Client",
+   "options": "Client"
+  },
+  {
+   "fieldname": "transfer_type",
+   "fieldtype": "Select",
+   "label": "Transfer Type"
+  },
+  {
+   "fieldname": "transfer_date",
+   "fieldtype": "Date",
+   "label": "Transfer Date"
+  },
+  {
+   "fieldname": "transfer_fee",
+   "fieldtype": "Currency",
+   "label": "Transfer Fee"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "remarks"
+  },
+  {
+   "fieldname": "check_list_section",
+   "fieldtype": "Section Break",
+   "label": "Check List"
+  },
+  {
+   "default": "0",
+   "fieldname": "original_documents_returned",
+   "fieldtype": "Check",
+   "label": "Original Documents Returned"
+  },
+  {
+   "fieldname": "document_return_log",
+   "fieldtype": "Small Text",
+   "label": "Documents Return Log"
+  },
+  {
+   "fieldname": "transfer_form_scan",
+   "fieldtype": "Attach",
+   "label": "Transfer Form Scan"
+  },
+  {
+   "fieldname": "buyer_id_copy",
+   "fieldtype": "Attach",
+   "label": "Buyer Id"
+  },
+  {
+   "fieldname": "seller_id_copy",
+   "fieldtype": "Attach",
+   "label": "Seller Id"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-13 16:15:47.554870",
+ "modified_by": "Administrator",
+ "module": "Rshpm System",
+ "name": "Ownership Transfer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

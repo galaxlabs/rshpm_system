@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-13 15:54:15.156886",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "property",
+  "ownership_start_date",
+  "ownership_end_date",
+  "remarks",
+  "column_break_qirl",
+  "owner_client",
+  "ownership_status",
+  "booking",
+  "section_break_vrys",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vrys",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property Ownership",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "ownership_start_date",
+   "fieldtype": "Date",
+   "label": "Ownership Start Date"
+  },
+  {
+   "fieldname": "column_break_qirl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner_client",
+   "fieldtype": "Link",
+   "label": "Owner Client",
+   "options": "Client"
+  },
+  {
+   "fieldname": "ownership_status",
+   "fieldtype": "Select",
+   "label": "Ownership Status"
+  },
+  {
+   "fieldname": "ownership_end_date",
+   "fieldtype": "Date",
+   "label": "Ownership End Date"
+  },
+  {
+   "fieldname": "booking",
+   "fieldtype": "Link",
+   "label": "Booking",
+   "options": "Booking"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-13 16:05:44.996396",
+ "modified_by": "Administrator",
+ "module": "Rshpm System",
+ "name": "Property Ownership",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

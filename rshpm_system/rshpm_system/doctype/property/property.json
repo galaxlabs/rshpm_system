@@ -12,6 +12,7 @@
   "total_cost",
   "property_type",
   "reserved_till",
+  "current_owner",
   "column_break_knie",
   "block",
   "status",
@@ -19,6 +20,7 @@
   "qr_code",
   "current_booking",
   "booked_by",
+  "is_owner_locked",
   "section_break_dohw",
   "amenities",
   "property_price_history",
@@ -138,13 +140,25 @@
    "fieldname": "booked_by",
    "fieldtype": "Data",
    "label": "Booked By"
+  },
+  {
+   "fieldname": "current_owner",
+   "fieldtype": "Link",
+   "label": "Current Owner",
+   "options": "Property Ownership"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_owner_locked",
+   "fieldtype": "Check",
+   "label": "Is Owner Locked"
   }
  ],
  "grid_page_length": 50,
  "image_field": "qr_code",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-13 02:22:19.626534",
+ "modified": "2026-01-13 16:04:19.738385",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Property",
