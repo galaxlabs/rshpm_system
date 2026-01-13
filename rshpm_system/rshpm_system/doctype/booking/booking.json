@@ -10,13 +10,25 @@
   "column_break_hsgk",
   "customer",
   "property",
+  "section_break_ywmq",
+  "down_payment_amount",
+  "next_due_date",
+  "overdue_amount",
+  "column_break_ijpd",
+  "down_payment_paid",
+  "remaining_balance",
+  "advance_amount",
+  "column_break_yast",
+  "installments_paid_total",
+  "total_paid",
   "payment_plan_section",
   "down_payment_percentage",
   "installment_interval",
   "column_break_pkch",
   "total_installments",
   "section_break_oiva",
-  "installment_schedule"
+  "installment_schedule",
+  "amended_from"
  ],
  "fields": [
   {
@@ -35,7 +47,7 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer"
+   "options": "Client"
   },
   {
    "fieldname": "property",
@@ -83,12 +95,82 @@
    "fieldtype": "Table",
    "label": "Installment Schedule",
    "options": "Installment Schedule Table"
+  },
+  {
+   "fieldname": "section_break_ywmq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "down_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Down Payment Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ijpd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yast",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "down_payment_paid",
+   "fieldtype": "Currency",
+   "label": "Down Payment Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "installments_paid_total",
+   "fieldtype": "Currency",
+   "label": "Installments Paid Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_paid",
+   "fieldtype": "Currency",
+   "label": "Total Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_balance",
+   "fieldtype": "Currency",
+   "label": "Remaining Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_due_date",
+   "fieldtype": "Date",
+   "label": "Next Due Date"
+  },
+  {
+   "fieldname": "overdue_amount",
+   "fieldtype": "Currency",
+   "label": "Overdue Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-01-12 20:05:56.229285",
+ "modified": "2026-01-13 01:10:05.474493",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Booking",

@@ -1,11 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{customer_name}",
  "creation": "2026-01-12 20:15:28.827624",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
+  "customer_name",
   "cnic_number",
   "date_of_birth",
   "column_break_krre",
@@ -20,11 +21,6 @@
   "nominee_mobile"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
   {
    "fieldname": "cnic_number",
    "fieldtype": "Data",
@@ -87,16 +83,22 @@
    "fieldname": "profile_picture",
    "fieldtype": "Attach Image",
    "label": "Profile Picture"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
   }
  ],
  "grid_page_length": 50,
  "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-12 20:22:28.145584",
+ "modified": "2026-01-12 23:13:46.207359",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Client",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

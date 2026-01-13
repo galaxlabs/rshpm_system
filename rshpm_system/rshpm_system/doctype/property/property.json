@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{plot_number}{block}",
+ "autoname": "format:{block}-{plot_number}",
  "creation": "2026-01-12 19:25:29.029860",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -10,11 +10,20 @@
   "plot_number",
   "data",
   "total_cost",
+  "property_type",
+  "reserved_till",
   "column_break_knie",
   "block",
   "status",
   "unique_id",
   "qr_code",
+  "current_booking",
+  "booked_by",
+  "section_break_dohw",
+  "amenities",
+  "property_price_history",
+  "section_break_kjiu",
+  "description",
   "section_break_sktf",
   "location"
  ],
@@ -35,7 +44,7 @@
    "fieldname": "data",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Data",
+   "label": "Area",
    "reqd": 1
   },
   {
@@ -58,7 +67,8 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
-   "label": "Status"
+   "label": "Status",
+   "options": "Available\nBooked\nSold\nBlocked"
   },
   {
    "fieldname": "unique_id",
@@ -80,13 +90,61 @@
    "fieldtype": "Attach Image",
    "label": "QR Code",
    "read_only": 1
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Select",
+   "label": "Property Type",
+   "options": "Residential\nCommercial\nPlot"
+  },
+  {
+   "fieldname": "section_break_kjiu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_dohw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amenities",
+   "fieldtype": "Table",
+   "label": "Amenities",
+   "options": "Property Amenity"
+  },
+  {
+   "fieldname": "property_price_history",
+   "fieldtype": "Table",
+   "label": "Property Price History",
+   "options": "Property Price History"
+  },
+  {
+   "fieldname": "reserved_till",
+   "fieldtype": "Datetime",
+   "label": "Reserved Till"
+  },
+  {
+   "fieldname": "current_booking",
+   "fieldtype": "Link",
+   "label": "Current Booking",
+   "options": "Booking"
+  },
+  {
+   "fetch_from": "current_booking.customer",
+   "fieldname": "booked_by",
+   "fieldtype": "Data",
+   "label": "Booked By"
   }
  ],
  "grid_page_length": 50,
  "image_field": "qr_code",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-12 20:14:55.672152",
+ "modified": "2026-01-13 02:22:19.626534",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Property",

@@ -1,19 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{booking}-{payment_date}-{#####}",
  "creation": "2026-01-12 20:06:18.047595",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "is_advance",
+  "section_break_tvhw",
   "payment_date",
   "amount_paid",
   "receiptinvoice_number",
   "received_by",
+  "unallocated_amount",
   "column_break_yrpn",
+  "booking",
   "customer",
   "property",
   "payment_mode",
-  "payment_type"
+  "payment_type",
+  "amended_from",
+  "section_break_npgq",
+  "payment_allocation"
  ],
  "fields": [
   {
@@ -31,7 +39,7 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer"
+   "options": "Client"
   },
   {
    "fieldname": "property",
@@ -67,15 +75,58 @@
    "fieldtype": "Link",
    "label": "Received By",
    "options": "User"
+  },
+  {
+   "fieldname": "booking",
+   "fieldtype": "Link",
+   "label": "Booking",
+   "options": "Booking"
+  },
+  {
+   "fieldname": "unallocated_amount",
+   "fieldtype": "Currency",
+   "label": "Unallocated Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_advance",
+   "fieldtype": "Check",
+   "label": "Is Advance"
+  },
+  {
+   "fieldname": "section_break_tvhw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_npgq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_allocation",
+   "fieldtype": "Table",
+   "label": "Payment Allocation",
+   "options": "Payment Allocation"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-01-12 20:11:44.988776",
+ "modified": "2026-01-13 02:21:52.201148",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Payment",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

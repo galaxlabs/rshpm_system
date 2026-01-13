@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-13 00:53:07.632582",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "installment_name",
+  "allocated_amount",
+  "allocated_date",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "installment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Installment Name"
+  },
+  {
+   "fieldname": "allocated_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Allocated Amount"
+  },
+  {
+   "fieldname": "allocated_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Allocated Date"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Date",
+   "label": "Note"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-13 01:21:33.000695",
+ "modified_by": "Administrator",
+ "module": "Rshpm System",
+ "name": "Payment Allocation",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

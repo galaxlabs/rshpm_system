@@ -1,45 +1,48 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:block_name",
- "creation": "2026-01-12 20:12:39.587858",
+ "autoname": "field:amenity_name",
+ "creation": "2026-01-12 23:56:33.703778",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "block_name",
-  "total_number_of_plots",
-  "amended_from"
+  "is_active",
+  "amenity_name",
+  "category",
+  "description"
  ],
  "fields": [
   {
-   "fieldname": "block_name",
+   "fieldname": "amenity_name",
    "fieldtype": "Data",
-   "label": "Block Name",
+   "label": "Amenity Name",
    "unique": 1
   },
   {
-   "fieldname": "total_number_of_plots",
-   "fieldtype": "Int",
-   "label": "Total Number of Plots"
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
   },
   {
-   "fieldname": "amended_from",
+   "fieldname": "category",
    "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Block",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
+   "label": "Category",
+   "options": "Amenity Category"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-13 02:24:41.417979",
+ "modified": "2026-01-13 02:23:30.731146",
  "modified_by": "Administrator",
  "module": "Rshpm System",
- "name": "Block",
+ "name": "Amenity",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -56,13 +59,10 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1,
- "track_seen": 1,
- "track_views": 1
+ "title_field": "amenity_name"
 }
