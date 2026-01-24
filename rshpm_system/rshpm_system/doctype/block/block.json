@@ -8,7 +8,8 @@
  "field_order": [
   "block_name",
   "total_number_of_plots",
-  "amended_from"
+  "amended_from",
+  "company"
  ],
  "fields": [
   {
@@ -31,12 +32,18 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-13 02:24:41.417979",
+ "modified": "2026-01-24 20:19:46.182862",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Block",
@@ -57,6 +64,7 @@
   }
  ],
  "quick_entry": 1,
+ "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

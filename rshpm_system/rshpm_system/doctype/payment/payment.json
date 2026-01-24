@@ -13,6 +13,8 @@
   "receiptinvoice_number",
   "received_by",
   "unallocated_amount",
+  "company",
+  "reference_no",
   "column_break_yrpn",
   "booking",
   "customer",
@@ -20,11 +22,13 @@
   "payment_mode",
   "payment_type",
   "amended_from",
+  "approved_by",
   "section_break_npgq",
   "payment_allocation"
  ],
  "fields": [
   {
+   "default": "Today",
    "fieldname": "payment_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -36,12 +40,14 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "booking.customer",
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
    "options": "Client"
   },
   {
+   "fetch_from": "booking.property",
    "fieldname": "property",
    "fieldtype": "Link",
    "label": "Property",
@@ -61,7 +67,7 @@
    "fieldname": "payment_mode",
    "fieldtype": "Select",
    "label": "Payment Mode",
-   "options": "Cash\nOnline\nCheque"
+   "options": "Cash\nBank\nCheque\nOnline"
   },
   {
    "fieldname": "payment_type",
@@ -116,13 +122,31 @@
    "fieldtype": "Table",
    "label": "Payment Allocation",
    "options": "Payment Allocation"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "__user",
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "reference_no",
+   "fieldtype": "Small Text",
+   "label": "Reference No"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-13 02:21:52.201148",
+ "modified": "2026-01-24 20:19:44.609740",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Payment",
@@ -142,6 +166,7 @@
    "write": 1
   }
  ],
+ "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

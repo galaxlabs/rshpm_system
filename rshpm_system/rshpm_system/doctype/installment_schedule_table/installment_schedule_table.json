@@ -11,7 +11,8 @@
   "status",
   "column_break_vxsj",
   "due_date",
-  "paid_amount"
+  "paid_amount",
+  "last_payment_date"
  ],
  "fields": [
   {
@@ -31,7 +32,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Unpaid\nPartially Paid\nPaid"
+   "options": "Unpaid\nPartially Paid\nPaid\nUnpaid\nPartially Paid\nPaid\nOverdue"
   },
   {
    "fieldname": "column_break_vxsj",
@@ -48,18 +49,24 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Paid Amount"
+  },
+  {
+   "fieldname": "last_payment_date",
+   "fieldtype": "Date",
+   "label": "Last Payment Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-01-12 20:04:38.491374",
+ "modified": "2026-01-24 20:19:45.506435",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Installment Schedule Table",
  "owner": "Administrator",
  "permissions": [],
+ "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

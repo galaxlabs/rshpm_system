@@ -1,54 +1,60 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{project_name}{developer}",
- "creation": "2026-01-13 01:32:57.287217",
+ "creation": "2026-01-24 18:49:46.275576",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "project_name",
-  "location",
-  "developer",
-  "phase",
-  "company"
+  "active",
+  "company",
+  "cnic_normalized",
+  "phone_normalized",
+  "reason",
+  "flagged_by"
  ],
  "fields": [
   {
-   "fieldname": "project_name",
-   "fieldtype": "Data",
-   "label": "Project Name"
-  },
-  {
-   "fieldname": "location",
-   "fieldtype": "Data",
-   "label": "Location"
-  },
-  {
-   "fieldname": "developer",
-   "fieldtype": "Data",
-   "label": "Developer"
-  },
-  {
-   "fieldname": "phase",
-   "fieldtype": "Data",
-   "label": "Phase"
-  },
-  {
    "fieldname": "company",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "cnic_normalized",
+   "fieldtype": "Data",
+   "label": "CNIC Normalized"
+  },
+  {
+   "fieldname": "phone_normalized",
+   "fieldtype": "Data",
+   "label": "Phone Normalized"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason"
+  },
+  {
+   "default": "__user",
+   "fieldname": "flagged_by",
+   "fieldtype": "Data",
+   "label": "Flagged By"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
    "options": "Company"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:19:46.332129",
+ "modified": "2026-01-24 20:19:45.853336",
  "modified_by": "Administrator",
  "module": "Rshpm System",
- "name": "Housing Scheme",
- "naming_rule": "Expression",
+ "name": "Watchlist",
  "owner": "Administrator",
  "permissions": [
   {

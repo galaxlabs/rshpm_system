@@ -8,7 +8,8 @@
  "field_order": [
   "property_info_section",
   "plot_number",
-  "data",
+  "area_text",
+  "area_unit",
   "total_cost",
   "property_type",
   "reserved_till",
@@ -16,11 +17,13 @@
   "column_break_knie",
   "block",
   "status",
+  "unit_type",
   "unique_id",
   "qr_code",
   "current_booking",
   "booked_by",
   "is_owner_locked",
+  "company",
   "section_break_dohw",
   "amenities",
   "property_price_history",
@@ -40,13 +43,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Plot Number",
-   "reqd": 1
-  },
-  {
-   "fieldname": "data",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Area",
    "reqd": 1
   },
   {
@@ -70,7 +66,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Available\nBooked\nSold\nBlocked"
+   "options": "Inventory\nReserved\nBooked\nAllotted\nPossession\nTransferred\nCancelled\nBlocked"
   },
   {
    "fieldname": "unique_id",
@@ -152,13 +148,44 @@
    "fieldname": "is_owner_locked",
    "fieldtype": "Check",
    "label": "Is Owner Locked"
+  },
+  {
+   "fieldname": "area_text",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area_unit",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Area Unit",
+   "options": "Kanal\nMarla\nSqyd\nSqft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Unit Type",
+   "options": "Plot\nHouse\nShop\nApartment\nOther",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "image_field": "qr_code",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-13 16:04:19.738385",
+ "modified": "2026-01-24 20:19:45.649743",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Property",
@@ -178,6 +205,7 @@
    "write": 1
   }
  ],
+ "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

@@ -13,12 +13,12 @@
   "from_client",
   "to_client",
   "transfer_fee",
+  "company",
+  "status",
   "check_list_section",
   "original_documents_returned",
   "document_return_log",
-  "transfer_form_scan",
-  "buyer_id_copy",
-  "seller_id_copy"
+  "required_docs"
  ],
  "fields": [
   {
@@ -61,7 +61,7 @@
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "remarks"
+   "label": "Remarks"
   },
   {
    "fieldname": "check_list_section",
@@ -80,25 +80,28 @@
    "label": "Documents Return Log"
   },
   {
-   "fieldname": "transfer_form_scan",
-   "fieldtype": "Attach",
-   "label": "Transfer Form Scan"
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
   },
   {
-   "fieldname": "buyer_id_copy",
-   "fieldtype": "Attach",
-   "label": "Buyer Id"
+   "fieldname": "required_docs",
+   "fieldtype": "Table",
+   "label": "Required Docs",
+   "options": "Attachments"
   },
   {
-   "fieldname": "seller_id_copy",
-   "fieldtype": "Attach",
-   "label": "Seller Id"
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved\nCompleted"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-13 16:15:47.554870",
+ "modified": "2026-01-24 20:19:43.552401",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Ownership Transfer",
@@ -117,6 +120,7 @@
    "write": 1
   }
  ],
+ "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

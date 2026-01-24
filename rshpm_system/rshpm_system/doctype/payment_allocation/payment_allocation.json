@@ -9,7 +9,10 @@
   "installment_name",
   "allocated_amount",
   "allocated_date",
-  "note"
+  "note",
+  "attachments_typ",
+  "attach_image",
+  "attach_file"
  ],
  "fields": [
   {
@@ -34,18 +37,35 @@
    "fieldname": "note",
    "fieldtype": "Date",
    "label": "Note"
+  },
+  {
+   "fieldname": "attachments_typ",
+   "fieldtype": "Select",
+   "label": "Attachments",
+   "options": "Deposit Slip\nScreenshot\nReceipt Scan"
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  },
+  {
+   "fieldname": "attach_file",
+   "fieldtype": "Attach",
+   "label": "Attach File"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-01-13 01:21:33.000695",
+ "modified": "2026-01-24 20:19:44.837685",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Payment Allocation",
  "owner": "Administrator",
  "permissions": [],
+ "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

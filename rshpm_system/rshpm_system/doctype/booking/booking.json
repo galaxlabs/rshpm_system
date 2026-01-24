@@ -7,10 +7,14 @@
  "field_order": [
   "booking_date",
   "total_cost",
+  "discount",
+  "net_total",
   "column_break_hsgk",
   "customer",
   "property",
+  "company",
   "section_break_ywmq",
+  "payment_plan_type",
   "down_payment_amount",
   "next_due_date",
   "overdue_amount",
@@ -24,8 +28,11 @@
   "payment_plan_section",
   "down_payment_percentage",
   "installment_interval",
+  "penalty_rule",
   "column_break_pkch",
   "total_installments",
+  "grace_days",
+  "status",
   "section_break_oiva",
   "installment_schedule",
   "amended_from"
@@ -84,7 +91,7 @@
    "fieldname": "installment_interval",
    "fieldtype": "Select",
    "label": "Installment Interval",
-   "options": "Monthly\nQuarterly"
+   "options": "Monthly\nQuarterly\nCustom"
   },
   {
    "fieldname": "section_break_oiva",
@@ -164,13 +171,51 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total"
+  },
+  {
+   "fieldname": "payment_plan_type",
+   "fieldtype": "Select",
+   "label": "Payment Plan Type",
+   "options": "Fixed\nCustom"
+  },
+  {
+   "fieldname": "grace_days",
+   "fieldtype": "Data",
+   "label": "Grace Days"
+  },
+  {
+   "fieldname": "penalty_rule",
+   "fieldtype": "Data",
+   "label": "Penalty Rule"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nAllotted\nActive\nCompleted\nCancelled"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-13 01:10:05.474493",
+ "modified": "2026-01-24 20:19:45.303127",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Booking",
@@ -189,6 +234,7 @@
    "write": 1
   }
  ],
+ "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

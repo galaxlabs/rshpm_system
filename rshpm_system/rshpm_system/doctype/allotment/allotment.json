@@ -1,29 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:category_name",
- "creation": "2026-01-12 23:58:57.532971",
+ "creation": "2026-01-24 19:33:51.414510",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "category_name"
+  "section_break_8n2e"
  ],
  "fields": [
   {
-   "fieldname": "category_name",
-   "fieldtype": "Data",
-   "label": "Category Name",
-   "unique": 1
+   "fieldname": "section_break_8n2e",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:19:46.619637",
+ "modified": "2026-01-24 20:19:45.154564",
  "modified_by": "Administrator",
  "module": "Rshpm System",
- "name": "Amenity Category",
- "naming_rule": "By fieldname",
+ "name": "Allotment",
  "owner": "Administrator",
  "permissions": [
   {
@@ -44,6 +40,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "category_name"
+ "states": []
 }

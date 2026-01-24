@@ -1,29 +1,38 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:category_name",
- "creation": "2026-01-12 23:58:57.532971",
+ "creation": "2026-01-24 19:34:38.850639",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "category_name"
+  "possession_date",
+  "notes",
+  "final_clearance_check"
  ],
  "fields": [
   {
-   "fieldname": "category_name",
-   "fieldtype": "Data",
-   "label": "Category Name",
-   "unique": 1
+   "fieldname": "possession_date",
+   "fieldtype": "Date",
+   "label": "Possession Date"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Date",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "final_clearance_check",
+   "fieldtype": "Date",
+   "label": "Final Clearance Check"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:19:46.619637",
+ "modified": "2026-01-24 20:19:45.004706",
  "modified_by": "Administrator",
  "module": "Rshpm System",
- "name": "Amenity Category",
- "naming_rule": "By fieldname",
+ "name": "Possession",
  "owner": "Administrator",
  "permissions": [
   {
@@ -44,6 +53,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "category_name"
+ "states": []
 }

@@ -6,19 +6,28 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "customer_name",
+  "full_name",
+  "father_name",
   "cnic_number",
   "date_of_birth",
+  "company",
+  "reletion_with_nominee",
+  "kyc_status",
   "column_break_krre",
   "mobile_number",
   "email_address",
   "address",
+  "cnic_normalized",
+  "phone_normalized",
+  "risk_flags",
   "nominee_details_section",
   "nominee_name",
   "profile_picture",
   "column_break_phgp",
   "nominee_cnic",
-  "nominee_mobile"
+  "nominee_mobile",
+  "section_break_dosb",
+  "attachments"
  ],
  "fields": [
   {
@@ -85,16 +94,67 @@
    "label": "Profile Picture"
   },
   {
-   "fieldname": "customer_name",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "full_name",
    "fieldtype": "Data",
-   "label": "Customer Name"
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father Name"
+  },
+  {
+   "fieldname": "cnic_normalized",
+   "fieldtype": "Data",
+   "label": "Cnic Normalized",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone_normalized",
+   "fieldtype": "Data",
+   "label": "Phone Normalized",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reletion_with_nominee",
+   "fieldtype": "Select",
+   "label": "Reletion With Nominee",
+   "options": "Wife\nFather\nMother\nSon\nDoughter\nSister\nBrother",
+   "search_index": 1
+  },
+  {
+   "fieldname": "kyc_status",
+   "fieldtype": "Select",
+   "label": "KYC Status",
+   "options": "Unverified\nVerified\nRejected"
+  },
+  {
+   "fieldname": "risk_flags",
+   "fieldtype": "Small Text",
+   "label": "Risk Flags"
+  },
+  {
+   "fieldname": "section_break_dosb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Attachments"
   }
  ],
  "grid_page_length": 50,
  "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-12 23:13:46.207359",
+ "modified": "2026-01-24 20:19:43.972407",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Client",
@@ -114,6 +174,7 @@
    "write": 1
   }
  ],
+ "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

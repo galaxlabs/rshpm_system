@@ -1,48 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:amenity_name",
- "creation": "2026-01-12 23:56:33.703778",
+ "autoname": "field:document_types",
+ "creation": "2026-01-24 18:22:24.442125",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "is_active",
-  "amenity_name",
-  "category",
-  "description"
+  "document_types"
  ],
  "fields": [
   {
-   "fieldname": "amenity_name",
+   "fieldname": "document_types",
    "fieldtype": "Data",
-   "label": "Amenity Name",
+   "label": "Document Types",
    "unique": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "is_active",
-   "fieldtype": "Check",
-   "label": "Is Active"
-  },
-  {
-   "fieldname": "category",
-   "fieldtype": "Link",
-   "label": "Category",
-   "options": "Amenity Category"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:19:46.758896",
+ "modified": "2026-01-24 20:19:44.292810",
  "modified_by": "Administrator",
  "module": "Rshpm System",
- "name": "Amenity",
+ "name": "Document Types",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -64,6 +44,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "amenity_name"
+ "states": []
 }
