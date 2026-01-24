@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{customer_name}",
+ "autoname": "format:{full_name}",
  "creation": "2026-01-12 20:15:28.827624",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -35,8 +35,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "CNIC Number",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "column_break_krre",
@@ -154,7 +153,7 @@
  "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:19:43.972407",
+ "modified": "2026-01-24 20:31:39.301282",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Client",
