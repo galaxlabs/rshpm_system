@@ -1,46 +1,45 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-01-13 00:17:58.031218",
+ "creation": "2026-01-24 22:30:45.472072",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "base_price",
-  "discount",
-  "final_price"
+  "date",
+  "remarks",
+  "next_action_date"
  ],
  "fields": [
   {
-   "fieldname": "base_price",
-   "fieldtype": "Currency",
+   "fieldname": "date",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Base Price"
+   "label": "Date"
   },
   {
-   "fieldname": "discount",
-   "fieldtype": "Currency",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
-   "label": "Discount"
+   "label": "Remarks"
   },
   {
-   "fieldname": "final_price",
-   "fieldtype": "Currency",
+   "fieldname": "next_action_date",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Final Price"
+   "label": "Next Ection Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-01-24 23:49:45.773434",
+ "modified": "2026-01-24 23:49:46.176785",
  "modified_by": "Administrator",
  "module": "Rshpm System",
- "name": "Property Price History",
+ "name": "Follow Ups",
  "owner": "Administrator",
  "permissions": [],
- "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

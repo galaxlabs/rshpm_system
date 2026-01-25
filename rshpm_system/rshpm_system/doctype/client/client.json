@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{full_name}",
+ "autoname": "naming_series:",
  "creation": "2026-01-12 20:15:28.827624",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -13,6 +13,8 @@
   "company",
   "reletion_with_nominee",
   "kyc_status",
+  "naming_series",
+  "user",
   "column_break_krre",
   "mobile_number",
   "email_address",
@@ -44,7 +46,8 @@
   {
    "fieldname": "mobile_number",
    "fieldtype": "Data",
-   "label": "Mobile Number"
+   "label": "Mobile Number",
+   "reqd": 1
   },
   {
    "fieldname": "email_address",
@@ -79,8 +82,7 @@
   {
    "fieldname": "nominee_cnic",
    "fieldtype": "Data",
-   "label": "Nominee CNIC",
-   "unique": 1
+   "label": "Nominee CNIC"
   },
   {
    "fieldname": "nominee_mobile",
@@ -111,13 +113,17 @@
   {
    "fieldname": "cnic_normalized",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Cnic Normalized",
+   "no_copy": 1,
    "read_only": 1
   },
   {
    "fieldname": "phone_normalized",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Phone Normalized",
+   "no_copy": 1,
    "read_only": 1
   },
   {
@@ -147,17 +153,30 @@
    "fieldtype": "Table",
    "label": "Attachments",
    "options": "Attachments"
+  },
+  {
+   "default": "CLT-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:31:39.301282",
+ "modified": "2026-01-25 14:24:17.083315",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Client",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -171,6 +190,56 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client",
+   "share": 1
   }
  ],
  "restrict_to_domain": "Property",

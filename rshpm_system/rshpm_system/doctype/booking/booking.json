@@ -17,7 +17,6 @@
   "payment_plan_type",
   "down_payment_amount",
   "next_due_date",
-  "overdue_amount",
   "column_break_ijpd",
   "down_payment_paid",
   "remaining_balance",
@@ -25,6 +24,7 @@
   "column_break_yast",
   "installments_paid_total",
   "total_paid",
+  "overdue_amount",
   "payment_plan_section",
   "down_payment_percentage",
   "installment_interval",
@@ -54,13 +54,15 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Client"
+   "options": "Client",
+   "reqd": 1
   },
   {
    "fieldname": "property",
    "fieldtype": "Link",
    "label": "Property",
-   "options": "Property"
+   "options": "Property",
+   "reqd": 1
   },
   {
    "fetch_from": "property.total_cost",
@@ -176,7 +178,8 @@
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   },
   {
    "fieldname": "discount",
@@ -196,7 +199,7 @@
   },
   {
    "fieldname": "grace_days",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Grace Days"
   },
   {
@@ -208,14 +211,15 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Draft\nSubmitted\nAllotted\nActive\nCompleted\nCancelled"
+   "options": "Draft\nSubmitted\nAllotted\nActive\nCompleted\nCancelled",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-24 20:19:45.303127",
+ "modified": "2026-01-25 13:59:06.667529",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Booking",
@@ -231,6 +235,69 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cashier",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

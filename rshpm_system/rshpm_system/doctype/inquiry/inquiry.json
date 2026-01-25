@@ -1,22 +1,36 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{interested_scheme}/{property_type}-{MM}-{YY}-{###}",
- "creation": "2026-01-24 17:51:55.872279",
+ "autoname": "naming_series:",
+ "creation": "2026-01-24 23:59:22.950025",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "company",
-  "person_name",
+  "first_name",
+  "last_name",
+  "full_name",
   "interested_scheme",
   "property_type",
   "block",
   "client",
+  "assigned_to",
   "column_break_smsd",
   "phone",
+  "cnic",
+  "address",
   "budget",
   "notes",
-  "status"
+  "status",
+  "section_break_qddu",
+  "follow_ups",
+  "section_break_xwxt",
+  "cnic_normalized",
+  "phone_normalized",
+  "naming_series",
+  "column_break_rydv",
+  "converted_on",
+  "converted_by"
  ],
  "fields": [
   {
@@ -26,9 +40,49 @@
    "options": "Company"
   },
   {
-   "fieldname": "person_name",
+   "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "Person Name"
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name "
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "interested_scheme",
+   "fieldtype": "Link",
+   "label": "Interested Scheme",
+   "options": "Housing Scheme"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Select",
+   "label": "Property Type",
+   "options": "Plot\nHouse\nShop\nApartment\nOther"
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Block",
+   "options": "Block"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Client"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
   },
   {
    "fieldname": "column_break_smsd",
@@ -36,23 +90,18 @@
   },
   {
    "fieldname": "phone",
-   "fieldtype": "Phone",
-   "label": "Phone"
+   "fieldtype": "Data",
+   "label": "Mobile"
   },
   {
-   "fieldname": "interested_scheme",
+   "fieldname": "cnic",
    "fieldtype": "Data",
-   "label": "Interested Scheme"
+   "label": "CNIC"
   },
   {
-   "fieldname": "property_type",
-   "fieldtype": "Data",
-   "label": "Property Type"
-  },
-  {
-   "fieldname": "block",
-   "fieldtype": "Data",
-   "label": "Block"
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
   },
   {
    "fieldname": "budget",
@@ -68,23 +117,67 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "New\nContacted\nFollow-up\nConverted\nClosed"
+   "options": "New\nContacted\nFollow-up\nConverted\nClosed\nQualified\nLost"
   },
   {
-   "fieldname": "client",
+   "fieldname": "section_break_qddu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "follow_ups",
+   "fieldtype": "Table",
+   "label": "Follow Ups",
+   "options": "Follow Ups"
+  },
+  {
+   "fieldname": "section_break_xwxt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cnic_normalized",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone_normalized",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "INQ-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rydv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "converted_on",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "converted_by",
    "fieldtype": "Link",
-   "label": "Client",
-   "options": "Client"
+   "options": "User",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:19:46.007341",
+ "modified": "2026-01-25 14:08:25.113797",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Inquiry",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -98,9 +191,40 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1,
+   "write": 1
   }
  ],
- "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

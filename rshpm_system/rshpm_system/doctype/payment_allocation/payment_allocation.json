@@ -7,12 +7,15 @@
  "engine": "InnoDB",
  "field_order": [
   "installment_name",
-  "allocated_amount",
   "allocated_date",
   "note",
   "attachments_typ",
   "attach_image",
-  "attach_file"
+  "attach_file",
+  "column_break_xfwa",
+  "allocated_amount",
+  "schedule_row_name",
+  "due_date"
  ],
  "fields": [
   {
@@ -35,7 +38,7 @@
   },
   {
    "fieldname": "note",
-   "fieldtype": "Date",
+   "fieldtype": "Small Text",
    "label": "Note"
   },
   {
@@ -53,13 +56,31 @@
    "fieldname": "attach_file",
    "fieldtype": "Attach",
    "label": "Attach File"
+  },
+  {
+   "fieldname": "column_break_xfwa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "schedule_row_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Schedule Row ID",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-01-24 20:19:44.837685",
+ "modified": "2026-01-25 01:21:01.068224",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Payment Allocation",

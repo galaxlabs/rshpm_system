@@ -1,25 +1,126 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-24 19:33:51.414510",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_8n2e"
+  "naming_series",
+  "company",
+  "column_break_fepm",
+  "booking",
+  "client",
+  "section_break_gurt",
+  "property",
+  "column_break_phyg",
+  "allotment_date",
+  "total_price",
+  "section_break_pflp",
+  "terms",
+  "signed_copy",
+  "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "section_break_8n2e",
+   "default": "ALT-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "no_copy": 1,
+   "options": "ALT-.YYYY.-.#####",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "no_copy": 1,
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fepm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "booking",
+   "fieldtype": "Link",
+   "label": "Booking",
+   "options": "Booking",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "booking.customer",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Client"
+  },
+  {
+   "fieldname": "section_break_gurt",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "booking.property",
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "column_break_phyg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "allotment_date",
+   "fieldtype": "Date",
+   "label": "Allotment Date"
+  },
+  {
+   "fetch_from": "booking.net_total",
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "label": "Total Price"
+  },
+  {
+   "fieldname": "section_break_pflp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Terms"
+  },
+  {
+   "fieldname": "signed_copy",
+   "fieldtype": "Attach",
+   "label": "Signed Copy"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Allotment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-01-24 20:19:45.154564",
+ "modified": "2026-01-25 14:10:00.559389",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Allotment",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -33,6 +134,40 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client",
+   "share": 1
   }
  ],
  "restrict_to_domain": "Property",

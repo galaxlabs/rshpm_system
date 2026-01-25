@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{block}-{plot_number}",
+ "autoname": "format:naming_series",
  "creation": "2026-01-12 19:25:29.029860",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,11 +9,13 @@
   "property_info_section",
   "plot_number",
   "area_text",
+  "area_value",
   "area_unit",
   "total_cost",
   "property_type",
   "reserved_till",
   "current_owner",
+  "naming_series",
   "column_break_knie",
   "block",
   "status",
@@ -24,6 +26,7 @@
   "booked_by",
   "is_owner_locked",
   "company",
+  "housing_scheme",
   "section_break_dohw",
   "amenities",
   "property_price_history",
@@ -60,7 +63,8 @@
    "fieldname": "block",
    "fieldtype": "Link",
    "label": "Block",
-   "options": "Block"
+   "options": "Block",
+   "reqd": 1
   },
   {
    "fieldname": "status",
@@ -71,7 +75,9 @@
   {
    "fieldname": "unique_id",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Unique ID",
+   "no_copy": 1,
    "read_only": 1
   },
   {
@@ -153,7 +159,7 @@
    "fieldname": "area_text",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Total Area",
+   "label": "Area",
    "reqd": 1
   },
   {
@@ -179,13 +185,35 @@
    "label": "Unit Type",
    "options": "Plot\nHouse\nShop\nApartment\nOther",
    "reqd": 1
+  },
+  {
+   "fieldname": "area_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "housing_scheme",
+   "fieldtype": "Link",
+   "label": "Housing Scheme",
+   "options": "Housing Scheme",
+   "reqd": 1
+  },
+  {
+   "default": "PROP-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "PROP-.YYYY.-.#####"
   }
  ],
  "grid_page_length": 50,
  "image_field": "qr_code",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:19:45.649743",
+ "modified": "2026-01-25 14:02:40.734751",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Property",
@@ -201,6 +229,48 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
    "share": 1,
    "write": 1
   }

@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{booking}-{payment_date}-{#####}",
+ "autoname": "naming_series:",
  "creation": "2026-01-12 20:06:18.047595",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "is_advance",
+  "naming_series",
   "section_break_tvhw",
   "payment_date",
   "amount_paid",
@@ -86,7 +87,8 @@
    "fieldname": "booking",
    "fieldtype": "Link",
    "label": "Booking",
-   "options": "Booking"
+   "options": "Booking",
+   "reqd": 1
   },
   {
    "fieldname": "unallocated_amount",
@@ -140,17 +142,25 @@
    "fieldname": "reference_no",
    "fieldtype": "Small Text",
    "label": "Reference No"
+  },
+  {
+   "default": "PAY-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "options": "PAY-.YYYY.-.#####",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-24 20:19:44.609740",
+ "modified": "2026-01-25 14:14:48.223280",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Payment",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -164,6 +174,54 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cashier",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Client",
+   "share": 1
   }
  ],
  "restrict_to_domain": "Property",

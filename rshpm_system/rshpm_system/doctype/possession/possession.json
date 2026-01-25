@@ -1,38 +1,81 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-24 19:34:38.850639",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "possession_date",
+  "company",
+  "booking",
+  "property",
+  "client",
   "notes",
-  "final_clearance_check"
+  "final_clearance_check",
+  "naming_series"
  ],
  "fields": [
   {
+   "default": "Today",
    "fieldname": "possession_date",
    "fieldtype": "Date",
-   "label": "Possession Date"
+   "in_list_view": 1,
+   "label": "Possession Date",
+   "reqd": 1
   },
   {
    "fieldname": "notes",
-   "fieldtype": "Date",
+   "fieldtype": "Small Text",
    "label": "Notes"
   },
   {
+   "default": "0",
    "fieldname": "final_clearance_check",
-   "fieldtype": "Date",
+   "fieldtype": "Check",
    "label": "Final Clearance Check"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "options": "POS-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "booking",
+   "fieldtype": "Link",
+   "label": "Booking",
+   "options": "Booking"
+  },
+  {
+   "fetch_from": "booking.property",
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fetch_from": "booking.customer",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Property"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-24 20:19:45.004706",
+ "modified": "2026-01-25 01:38:57.187261",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Possession",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

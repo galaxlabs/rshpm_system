@@ -246,14 +246,12 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-doc_events = {
-	"Booking": {
-		"validate": "rshpm_system.rshpm_system.doctype.booking.booking.validate_booking",
-		"on_submit": "rshpm_system.rshpm_system.doctype.booking.booking.on_submit_booking",
-		"on_cancel": "rshpm_system.rshpm_system.doctype.booking.booking.on_cancel_booking",
-	},
-    "Payment": {
-		"on_submit": "rshpm_system.rshpm_system.doctype.payment.payment.on_submit_payment",
-		"on_cancel": "rshpm_system.rshpm_system.doctype.payment.payment.on_cancel_payment",
-	}
+permission_query_conditions = {
+    "Client": "rshpm_system.permissions.client_query",
+    "Booking": "rshpm_system.permissions.booking_query",
+    "Payment": "rshpm_system.permissions.payment_query",
+    "Allotment": "rshpm_system.permissions.allotment_query",
+    "Possession": "rshpm_system.permissions.possession_query",
+    "Property Ownership": "rshpm_system.permissions.ownership_query",
+    "Ownership Transfer": "rshpm_system.permissions.transfer_query",
 }

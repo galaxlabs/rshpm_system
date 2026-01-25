@@ -112,6 +112,7 @@ class Booking(Document):
 	# ---------------------------
 	def on_submit(self):
 		self._lock_property_as_booked()
+		self.db_set("status", "Submitted")
 
 		# update status field for your UI (optional)
 		if (self.status or "") in ("", "Draft"):

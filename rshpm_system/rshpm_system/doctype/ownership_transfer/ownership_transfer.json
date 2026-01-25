@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "booking",
   "property",
   "transfer_type",
   "transfer_date",
@@ -14,18 +15,22 @@
   "to_client",
   "transfer_fee",
   "company",
-  "status",
+  "transfer_fee_paid",
   "check_list_section",
   "original_documents_returned",
   "document_return_log",
-  "required_docs"
+  "required_docs",
+  "amended_from"
  ],
  "fields": [
   {
+   "fetch_from": "booking.property",
    "fieldname": "property",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Property",
-   "options": "Property"
+   "options": "Property",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_ahyj",
@@ -34,14 +39,18 @@
   {
    "fieldname": "from_client",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "From Client",
-   "options": "Client"
+   "options": "Client",
+   "reqd": 1
   },
   {
    "fieldname": "to_client",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "To Client",
-   "options": "Client"
+   "options": "Client",
+   "reqd": 1
   },
   {
    "fieldname": "transfer_type",
@@ -80,10 +89,13 @@
    "label": "Documents Return Log"
   },
   {
+   "fetch_from": "booking.company",
    "fieldname": "company",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   },
   {
    "fieldname": "required_docs",
@@ -92,16 +104,33 @@
    "options": "Attachments"
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Draft\nSubmitted\nApproved\nCompleted"
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ownership Transfer",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "transfer_fee_paid",
+   "fieldtype": "Link",
+   "label": "Transfer Fee Paid",
+   "options": "Payment"
+  },
+  {
+   "fieldname": "booking",
+   "fieldtype": "Link",
+   "label": "Booking",
+   "options": "Booking"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-01-24 20:19:43.552401",
+ "modified": "2026-01-25 01:49:31.563933",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Ownership Transfer",
