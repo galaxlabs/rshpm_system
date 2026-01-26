@@ -47,6 +47,7 @@
    "fieldname": "mobile_number",
    "fieldtype": "Data",
    "label": "Mobile Number",
+   "options": "Phone",
    "reqd": 1
   },
   {
@@ -172,7 +173,7 @@
  "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-25 14:24:17.083315",
+ "modified": "2026-01-25 18:53:43.699987",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Client",
@@ -231,15 +232,6 @@
    "role": "Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Client",
-   "share": 1
   }
  ],
  "restrict_to_domain": "Property",

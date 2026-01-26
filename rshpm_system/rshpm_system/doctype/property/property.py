@@ -1,5 +1,7 @@
 import frappe
 from frappe.model.document import Document
+from frappe.utils import flt
+
 
 LOCKED_STATUSES = {"Booked", "Allotted", "Possession", "Transferred"}
 
@@ -20,6 +22,7 @@ class Property(Document):
 		self._normalize_fields()
 		self._ensure_company()
 		self._set_unique_id()
+		self._compute_area_sqft()
 		self._require_unique_fields()
 		self._prevent_duplicates()
 		self._enforce_status_flow()
@@ -105,3 +108,28 @@ class Property(Document):
 					"Manual change of Current Booking is not allowed.",
 					title="Property Locked",
 				)
+
+	def _compute_area_sqft(self):
+		area = flt(self.area_text)
+		unit = (self.area_unit or "").strip()
+
+		if area <= 0 or not unit:
+			self.area_value = 0
+			return
+
+		MARLA_SQFT = 272.25
+		KANAL_SQFT = 20 * MARLA_SQFT
+		SQYD_SQFT = 9
+
+		if unit == "Sqft":
+			sqft = area
+		elif unit == "Sqyd":
+			sqft = area * SQYD_SQFT
+		elif unit == "Marla":
+			sqft = area * MARLA_SQFT
+		elif unit == "Kanal":
+			sqft = area * KANAL_SQFT
+		else:
+			sqft = area
+
+		self.area_value = flt(sqft, 2)

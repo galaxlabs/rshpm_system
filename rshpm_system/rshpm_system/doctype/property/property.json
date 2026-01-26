@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:naming_series",
+ "autoname": "naming_series:",
  "creation": "2026-01-12 19:25:29.029860",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -190,8 +190,8 @@
    "fieldname": "area_value",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Total Area",
-   "reqd": 1
+   "label": "Area (Sqft)",
+   "read_only": 1
   },
   {
    "fieldname": "housing_scheme",
@@ -213,11 +213,11 @@
  "image_field": "qr_code",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-25 14:02:40.734751",
+ "modified": "2026-01-26 07:14:18.119622",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Property",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

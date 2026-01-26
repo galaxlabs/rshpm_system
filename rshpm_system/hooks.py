@@ -247,6 +247,7 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 permission_query_conditions = {
+    "User": "rshpm_system.permissions.user_query",
     "Client": "rshpm_system.permissions.client_query",
     "Booking": "rshpm_system.permissions.booking_query",
     "Payment": "rshpm_system.permissions.payment_query",

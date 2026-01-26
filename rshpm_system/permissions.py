@@ -1,10 +1,17 @@
 import frappe
 
 def _is_client_user(user: str) -> bool:
-    return frappe.get_cached_value("User", user, "user_type") == "Website User" or frappe.has_role("Client", user)
+    if not user or user in ("Guest", "Administrator"):
+        return False
+    return "Client" in (frappe.get_roles(user) or [])
 
 def _client_name_for_user(user: str):
     return frappe.db.get_value("Client", {"user": user}, "name")
+
+def user_query(user):
+    if not _is_client_user(user):
+        return ""
+    return f"`tabUser`.`name` = {frappe.db.escape(user)}"
 
 def client_query(user):
     if not _is_client_user(user):
