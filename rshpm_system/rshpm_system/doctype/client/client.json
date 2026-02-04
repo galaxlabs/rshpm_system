@@ -1,5 +1,7 @@
 {
  "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2026-01-12 20:15:28.827624",
@@ -173,7 +175,7 @@
  "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-25 18:53:43.699987",
+ "modified": "2026-02-04 22:58:19.927607",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Client",
@@ -234,10 +236,14 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "restrict_to_domain": "Property",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

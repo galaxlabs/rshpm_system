@@ -1,5 +1,7 @@
 {
  "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2026-01-12 20:06:18.047595",
@@ -153,10 +155,11 @@
   }
  ],
  "grid_page_length": 50,
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-25 14:14:48.223280",
+ "modified": "2026-02-04 23:00:26.701006",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Payment",
