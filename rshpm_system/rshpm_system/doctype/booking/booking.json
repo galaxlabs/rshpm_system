@@ -5,15 +5,19 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "booking_info_section",
   "booking_date",
-  "total_cost",
-  "discount",
-  "net_total",
+  "payment_mode",
+  "installment_start",
   "column_break_hsgk",
   "customer",
   "property",
   "company",
-  "section_break_ywmq",
+  "status",
+  "pricing_section",
+  "total_cost",
+  "discount",
+  "net_total",
   "payment_plan_type",
   "down_payment_amount",
   "next_due_date",
@@ -21,10 +25,14 @@
   "down_payment_paid",
   "remaining_balance",
   "advance_amount",
+  "other_charges_total",
+  "token_paid_total",
+  "advance_paid_total",
   "column_break_yast",
   "installments_paid_total",
   "total_paid",
   "overdue_amount",
+  "schedule_locked",
   "payment_plan_section",
   "down_payment_percentage",
   "installment_interval",
@@ -32,7 +40,6 @@
   "column_break_pkch",
   "total_installments",
   "grace_days",
-  "status",
   "section_break_oiva",
   "installment_schedule",
   "amended_from"
@@ -93,7 +100,7 @@
    "fieldname": "installment_interval",
    "fieldtype": "Select",
    "label": "Installment Interval",
-   "options": "Monthly\nQuarterly\nCustom"
+   "options": "Monthly\nQuarterly\nSemi-Annual"
   },
   {
    "fieldname": "section_break_oiva",
@@ -104,10 +111,6 @@
    "fieldtype": "Table",
    "label": "Installment Schedule",
    "options": "Installment Schedule Table"
-  },
-  {
-   "fieldname": "section_break_ywmq",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "down_payment_amount",
@@ -148,9 +151,11 @@
    "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "next_due_date",
    "fieldtype": "Date",
-   "label": "Next Due Date"
+   "label": "Next Due Date",
+   "read_only": 1
   },
   {
    "fieldname": "overdue_amount",
@@ -175,10 +180,11 @@
    "search_index": 1
   },
   {
+   "fetch_from": "property.company",
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company",
+   "options": "Property Company",
    "reqd": 1
   },
   {
@@ -189,13 +195,14 @@
   {
    "fieldname": "net_total",
    "fieldtype": "Currency",
-   "label": "Net Total"
+   "label": "Net Total",
+   "read_only": 1
   },
   {
    "fieldname": "payment_plan_type",
    "fieldtype": "Select",
    "label": "Payment Plan Type",
-   "options": "Fixed\nCustom"
+   "options": "Fixed\nFlexible"
   },
   {
    "fieldname": "grace_days",
@@ -208,18 +215,66 @@
    "label": "Penalty Rule"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Draft\nSubmitted\nAllotted\nActive\nCompleted\nCancelled",
+   "options": "Draft\nSubmitted\nActive\nCompleted\nCancelled",
    "read_only": 1
+  },
+  {
+   "fieldname": "booking_info_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Info"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "Full Payment\nInstallments",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "installment_start",
+   "fieldtype": "Date",
+   "label": "Installment Start"
+  },
+  {
+   "default": "0",
+   "fieldname": "schedule_locked",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Schedule Locked"
+  },
+  {
+   "fieldname": "other_charges_total",
+   "fieldtype": "Currency",
+   "label": "Other Charges Total",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "token_paid_total",
+   "fieldtype": "Currency",
+   "label": "Token Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_paid_total",
+   "fieldtype": "Currency",
+   "label": "Advance Paid Total"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-25 13:59:06.667529",
+ "modified": "2026-02-06 13:21:04.526098",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Booking",

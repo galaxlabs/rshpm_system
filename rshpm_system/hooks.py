@@ -246,6 +246,12 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
+scheduler_events = {
+    "hourly": [
+        "rshpm_system.utils.property_reservations.expire_reserved_properties"
+    ]
+}
+
 permission_query_conditions = {
     "User": "rshpm_system.permissions.user_query",
     "Client": "rshpm_system.permissions.client_query",

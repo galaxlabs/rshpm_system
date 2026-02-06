@@ -16,41 +16,47 @@
  ],
  "fields": [
   {
+   "allow_on_submit": 1,
    "fieldname": "installment_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Installment Name"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "due_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Due Amount"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Unpaid\nPartially Paid\nPaid\nUnpaid\nPartially Paid\nPaid\nOverdue"
+   "options": "Unpaid\nPartially Paid\nPaid\nOverdue"
   },
   {
    "fieldname": "column_break_vxsj",
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "due_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Due Date"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "paid_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Paid Amount"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "last_payment_date",
    "fieldtype": "Date",
    "label": "Last Payment Date"
@@ -60,7 +66,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-01-24 23:49:44.460269",
+ "modified": "2026-02-05 16:30:48.103537",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Installment Schedule Table",

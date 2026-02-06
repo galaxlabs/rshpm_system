@@ -176,15 +176,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Company",
-   "options": "Company",
-   "read_only": 1
+   "options": "Property Company"
   },
   {
    "fieldname": "unit_type",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Unit Type",
-   "options": "Plot\nHouse\nShop\nApartment\nOther",
+   "options": "Property Unit Type",
    "reqd": 1
   },
   {
@@ -214,7 +213,7 @@
  "image_field": "qr_code",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-04 23:05:00.201049",
+ "modified": "2026-02-05 18:22:50.656960",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Property",

@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_copy": 1,
+ "allow_events_in_timeline": 1,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -128,10 +128,11 @@
    "options": "Payment Allocation"
   },
   {
+   "fetch_from": "booking.company",
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Property Company"
   },
   {
    "default": "__user",
@@ -155,11 +156,10 @@
   }
  ],
  "grid_page_length": 50,
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-02-04 23:00:26.701006",
+ "modified": "2026-02-06 12:48:26.015437",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Payment",
@@ -215,15 +215,6 @@
    "read": 1,
    "report": 1,
    "role": "Sales User",
-   "share": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Client",
    "share": 1
   }
  ],
