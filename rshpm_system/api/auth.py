@@ -2,18 +2,15 @@ import frappe
 
 @frappe.whitelist()
 def whoami():
-    """
-    Minimal "who am I" endpoint for SPA.
-    Works for any logged-in user (System User).
-    Returns basic identity info only.
-    """
-    if frappe.session.user == "Guest":
+    user = frappe.session.user
+    if user == "Guest":
         frappe.throw("Not logged in", frappe.PermissionError)
 
-    u = frappe.get_cached_doc("User", frappe.session.user)
+    # Safe across versions
+    full_name = frappe.db.get_value("User", user, "full_name") or user
+
     return {
-        "user": u.name,
-        "full_name": u.full_name,
-        "user_type": u.user_type,
-        "roles": frappe.get_roles(u.name),
+        "user": user,
+        "full_name": full_name,
+        "roles": frappe.get_roles(user),
     }

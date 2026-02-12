@@ -101,7 +101,7 @@
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Property Company"
   },
   {
    "fieldname": "full_name",
@@ -175,7 +175,7 @@
  "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-05 14:02:00.952144",
+ "modified": "2026-02-10 16:18:39.700879",
  "modified_by": "Administrator",
  "module": "Rshpm System",
  "name": "Client",
