@@ -1,0 +1,122 @@
+/* Theme (Galaxy) */
+body::before{
+  content:"RS THEME LOADED";
+  position: fixed;
+  top: 6px;
+  right: 10px;
+  z-index: 999999;
+  background: #0B3D2E;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+:root {
+  --iry-dark: #0B3D2E;
+  --iry-dark-2: #083226;
+  --iry-accent: #7CFFB2;
+  --iry-icon: #39C172;
+  --iry-white: #ffffff;
+  --iry-shadow: rgba(11, 61, 46, 0.28);
+}
+
+/* Top Navbar */
+header.navbar,
+.navbar,
+.navbar.navbar-expand {
+  background: var(--iry-dark) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+header.navbar .navbar-brand,
+header.navbar a,
+header.navbar .btn,
+header.navbar .icon,
+header.navbar .dropdown-toggle,
+header.navbar .search-bar * {
+  color: var(--iry-white) !important;
+}
+
+/* Workspace / Desk Sidebar */
+.layout-side-section,
+.desk-sidebar,
+.sidebar,
+.standard-sidebar {
+  background: var(--iry-dark) !important;
+}
+
+.layout-side-section *,
+.desk-sidebar *,
+.sidebar *,
+.standard-sidebar * {
+  color: var(--iry-white) !important;
+}
+
+/* Sidebar menu hover */
+.desk-sidebar a:hover,
+.standard-sidebar a:hover,
+.layout-side-section a:hover,
+.desk-sidebar .sidebar-item:hover,
+.standard-sidebar .sidebar-item:hover {
+  background: rgba(124, 255, 178, 0.18) !important;
+  color: var(--iry-white) !important;
+}
+
+.desk-sidebar a:hover .icon,
+.standard-sidebar a:hover .icon,
+.layout-side-section a:hover .icon {
+  color: var(--iry-accent) !important;
+}
+
+/* Active menu item */
+.desk-sidebar .active,
+.standard-sidebar .active {
+  background: rgba(124, 255, 178, 0.22) !important;
+}
+
+/* Icons: light green */
+.icon,
+.es-icon,
+.sidebar .icon {
+  color: var(--iry-icon);
+}
+
+/* White cards with green shadow */
+.card,
+.widget,
+.widget-box,
+.section-body,
+.form-section,
+.ce-block,
+.list-row-container {
+  background: var(--iry-white) !important;
+  box-shadow: 0 10px 24px var(--iry-shadow) !important;
+  border: 1px solid rgba(11, 61, 46, 0.08) !important;
+  border-radius: 12px;
+}
+
+/* Buttons - optional nice match */
+.btn-primary {
+  background: var(--iry-dark) !important;
+  border-color: var(--iry-dark) !important;
+}
+.btn-primary:hover {
+  background: var(--iry-dark-2) !important;
+  border-color: var(--iry-dark-2) !important;
+}
+
+/* Link accent */
+a {
+  color: #0E6B4F;
+}
+a:hover {
+  color: #0B3D2E;
+}
+
+.card:hover, .widget:hover {
+  box-shadow: 0 14px 30px rgba(124, 255, 178, 0.25), 0 10px 24px var(--iry-shadow) !important;
+  transform: translateY(-1px);
+  transition: all 120ms ease-in-out;
+}
